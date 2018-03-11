@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/reboot.css">
+    <link rel="stylesheet" href="style/grid.css">
+    <link rel="stylesheet" href="style/common.css">
+</head>
+<body>
+    <div id="app">
+        <section class="image-group">
+            <header class="image-group__header">
+                <div class="image-group__brand">
+                    <div class="image-group__brand-site">
+                        <a href="//fortexgroup.ru">Fortexgroup.ru</a>
+                    </div>
+                    <div class="image-group__brand-addr">
+                        Москва, тестовская улица, 10
+                    </div>
+                </div>
+                <div class="image-group__filter">
+                    <div class="image-group__filter-option image-group__filter-option_select">
+                        <label class="image-group__filter-label">Размер</label>
+                        <div class="image-group__filter-select">
+                            <div class="custom-select">
+                                <select name="size" id="filter_size" data-filter-size>
+                                    <option value="all">Все размеры</option>
+                                    <option value="large">Большие</option>
+                                    <option value="medium">Средние</option>
+                                    <option value="small">Маленькие</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-group__filter-option image-group__filter-option_checkbox">
+                        <div class="custom-checkbox">
+                            <label class="custom-checkbox__label" for="select_all">
+                                <input class="custom-checkbox__input" type="checkbox" name="select_all" id="select_all" data-select-all>
+                                <span class="custom-checkbox__fake"></span>
+                                <span class="custom-checkbox__title">Выбрать все</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-group__actions">
+                    <button class="button" data-remove disabled>Удалить</button>
+                </div>
+            </header>
+            <main class="image-group__body">
+                <ul class="image-group__list row" data-list>
+
+                </ul>
+            </main>
+        </section>
+    </div>
+    <template id="imageItem">
+        <li class="image-group__item-wrap col-1" data-image>
+            <div class="image-group__item" data-wrapper>
+                <div class="custom-checkbox">
+                    <label class="custom-checkbox__label image-group__item-label">
+                        <input class="custom-checkbox__input" type="checkbox" name="select" data-checkbox>
+                        <span class="image-group__item-mask"></span>
+                        <span class="custom-checkbox__fake"></span>
+                    </label>
+                </div>
+            </div>
+        </li>
+    </template>
+    <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
